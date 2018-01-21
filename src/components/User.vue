@@ -6,7 +6,7 @@
         <hr>
         <div>
             <div>
-                <appUserDetail :name="name"></appUserDetail>
+                <appUserDetail :name="name" @nameWasReset="name = $event"></appUserDetail>
             </div>
             <div>
                 <appUserEdit></appUserEdit>
