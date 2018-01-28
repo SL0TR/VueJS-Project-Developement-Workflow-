@@ -1,26 +1,37 @@
 <template>
-    <div class="container">
-        <div>
-            <div>
-                <appUser></appUser>
-            </div>
-        </div>
+  <div class="container">
+    <h1>Hello</h1>
+    <div>
+      <label>User</label>
+      <input type="text" label="blah" v-model="user.userName">
     </div>
+    <div>
+      <label>Email</label>
+      <input type="text" v-model="user.email">
+    </div>
+    <button @click="submit">Submit </button>
+  </div>
 </template>
 
 <script>
-    import User from './components/User.vue';
-
-    export default {
-        components: {
-            appUser: User
+  export default {
+    data() {
+      return {
+        user: {
+          userName: '',
+          email: ''
         }
+      }
+    },
+    methods: {
+      submit() {
+        console.log(this.user)
+      }
     }
+
+  }
 </script>
 
 <style>
-    div.component {
-        border: 1px solid black;
-        padding: 30px;
-    }
+    
 </style>
