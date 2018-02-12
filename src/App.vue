@@ -12,7 +12,7 @@
     <button @click="submit">Submit </button>
     <button @click="fetch">Get Data</button>
     <ul>
-      <li v-for="u in users">{{ u.userName }} - {{ u.email }}</li>
+      <li v-for="u in users">{{ u.userName }} --- {{ u.email }}</li>
     </ul>
   </div>
 </template>
