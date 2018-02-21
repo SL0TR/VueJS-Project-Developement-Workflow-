@@ -1,62 +1,25 @@
 <template>
-  <div class="container">
-    <h1>Hello</h1>
-    <div>
-      <label>User</label>
-      <input type="text" label="blah" v-model="user.userName">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+                <h1>Vuex</h1>
+                <app-result></app-result>
+                <hr>
+                <app-counter></app-counter>
+            </div>
+        </div>
     </div>
-    <div>
-      <label>Email</label>
-      <input type="text" v-model="user.email">
-    </div>
-    <button @click="submit">Submit </button>
-    <button @click="fetch">Get Data</button>
-    <ul>
-      <li v-for="u in users">{{ u.userName }} --- {{ u.email }}</li>
-    </ul>
-  </div>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        user: {
-          userName: '',
-          email: ''
-        },
-        users: [
+    import Counter from './components/Counter.vue';
+    import Result from './components/Result.vue';
 
-        ]
-      }
-    },
-    methods: {
-      submit() {
-        this.$http.post('', this.user).
-          then(response => {
-            console.log(response)
-          }, error => {
-            console.log(error)
-          })
-
-      },
-      fetch() {
-        this.$http.get('')
-          .then(response => {
-            return response.json()
-          })
-            .then( data => {
-              const resultArray = []
-              for (let key in data) {
-                resultArray.push(data[key])
-                this.users = resultArray
-              }
-            })
-      }
+    export default {
+        components: {
+            appCounter: Counter,
+            appResult: Result,
+        }
     }
-  }
 </script>
 
-<style>
-    
-</style>
