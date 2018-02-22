@@ -12,10 +12,7 @@ export default {
     ...mapGetters([
     'clickCounter',
     'doubleCounter'
-    ]),
-    ourOwn() {
-      
-    }
+    ])
   }
 }
 </script>
