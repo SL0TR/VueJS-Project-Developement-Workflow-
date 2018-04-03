@@ -1,7 +1,8 @@
 <template>
   <div>
+    <h3>ANOTHER RESULT</h3>
     <p>Another Counter is: {{ doubleCounter }} </p>
-    <p>Number of Clicks: {{ stringCounter }} </p>
+    <p>Another Number of Clicks: {{ stringCounter }} </p>
   </div>
 </template>
 
